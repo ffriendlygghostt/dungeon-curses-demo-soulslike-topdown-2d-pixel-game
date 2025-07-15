@@ -150,18 +150,21 @@ The project is created by a solo developer (sometimes in collaboration), without
 - Elements - fire, decay (poison), bleeding, chilling, freezing  
 - Thought-out interaction system between statuses
 
-Fire 		+ Ice        -> Removes freeze or chilling, triggers steam explosion (damage + stun)  
-Fire 		+ Decay      -> Instantly applies +50% decay tick damage, fully removes decay  
-Fire 		+ Bleeding   -> Instantly applies 50% of accumulated bleeding damage, removes it  
-Bleeding 	+ Decay      -> Triggers both effects' explosion, instantly dealing all accumulated damage  
-Bleeding 	+ Chilling   -> Increases bleeding duration by 50%, instantly stuns the target  
-Bleeding 	+ Freezing   -> Same as chilling  
-Decay 		+ Chilling   -> Removed, dealing 50% of decay damage instantly  
-Decay 		+ Bleeding   -> Tick effects are combined, increasing total effect  
-Decay 		+ Fire       -> Increases fire duration, removes decay  
-Chilling 	+ Fire       -> Removed, triggers steam explosion  
-Chilling 	+ Bleeding   -> Increases bleeding duration, stuns the target  
-Chilling 	+ Decay      -> No effect
+| Effect 1      | Effect 2    | Result                                                                 |
+|---------------|-------------|------------------------------------------------------------------------|
+| Fire          | Ice         | Removes freeze or chilling, triggers steam explosion (damage + stun).  |
+| Fire          | Decay       | Instantly applies +50% decay tick damage, fully removes decay.         |
+| Fire          | Bleeding    | Instantly applies 50% of accumulated bleeding damage, removes it.      |
+| Bleeding      | Decay       | Triggers both effects' explosion, instantly dealing all accumulated damage. |
+| Bleeding      | Chilling    | Increases bleeding duration by 50%, instantly stuns the target.        |
+| Bleeding      | Freezing    | Same as chilling.                                                      |
+| Decay         | Chilling    | Removed, dealing 50% of decay damage instantly.                        |
+| Decay         | Bleeding    | Tick effects are combined, increasing total effect.                    |
+| Decay         | Fire        | Increases fire duration, removes decay.                                |
+| Chilling      | Fire        | Removed, triggers steam explosion.                                    |
+| Chilling      | Bleeding    | Increases bleeding duration, stuns the target.                         |
+| Chilling      | Decay       | No effect.                                                             |
+
 
 The concept is somewhat similar to Genshin Impact’s system but with deeper influence on build-crafting and game balance  
 At first glance, the system may seem overloaded and will likely require simplification or refinement to make it clearer for players  
